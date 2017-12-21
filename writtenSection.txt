@@ -1,28 +1,29 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
-
+    Semantic HTML is the practice of using html tags which are descriptive of the contents, such as <article>, <span>, <h1> instead of using <div> exclusively. This is helpful for readability and for accessibility.
 2. What is the box model?
-
+    The box model is a representation of how html elements are rendered to the DOM. Every element has, from outside to inside: a margin, border, padding, and content. Understanding the box model is important in order to organize content on a webpage efficiently.
 3. What is the difference between IDs and Classes?
-
+    Though both are selectors, an ID should be unique to a single elements whereas classes can be used on multiple elements that require similar properties.
 4. What does the z-index do?
-
+    The z-index provides the third dimension to the DOM. It can be used to affect which element is rendered "in front of" or "behind" another element.
 5. Summarize what the keyword 'this' is used for?
-
+    The "this" keyword is used to provide context to an object or a function.
 6. What is a callback?
-
+    A callback is a function that is passed into another function as a parameter.
 7. What is a closure?
-
+    Closure is what happens when the scope of a function "closes over" values from the scope "above" it. It can be used to hide information and to prevent variables that need to persist from being garbage-collected.
 8. How does prototype work?
-
+    A prototype works by providing methods and properties to its descendants by inheritance. They can be useful for defining a method once and giving access to it to all descendants of the prototype.
 9. What is MVC?
-
+    MVC stands for Model-View-Controller which is a design philosophy in which the view is what the client sees, the model handles the logic and data storage, and the controller serves as a liason between the two by putting data from the model into the scope of the view that requires that data.
 10. What is the component lifecycle?
-
+    The lifecycle of a component refers to a series of functions that fire automatically as a component mounts, receives data, and is unmounted.
 11. What is REST?
-
+    REST is an application design philosophy for web pages. There is a lot more to it than I understand, but one basic tenant of the philosophy involves the use of the GET, POST, PUT, and DELETE terminology to carry out CRUD operations.
 12. Name three ways of getting data from the URL using express
+    Data from the URL can be accessed via parameters, queries, and I'm not sure what the third way is that you are looking for unless you mean accessing the URL object itself for the path or href values.
 
 create table users (
 id serial,
@@ -33,9 +34,13 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+    SELECT * FROM users;
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+    INSERT INTO users ( name, email ) VALUES ( 'Mario Hoyos', 'fake@fake.com' );
 
 -Update the newly created user's name to 'Bobby Boy':
+    UPDATE users SET name = 'Bobby Boy' WHERE name = 'Mario Hoyos' AND email = 'fake@fake.com';
 
 -Delete the newly updated user:
+    DELETE FROM users WHERE name = 'Bobby Boy' AND email = 'fake@fake.com';
